@@ -1,0 +1,6 @@
+warn: Sockets disabled, not accepting gdb connections
+hack: be nice to actually delete the event here
+warn: addt/sum   f11,f10,f12: non-standard trapping mode not supported
+warn: subt/sum   f12,f10,f0: non-standard trapping mode not supported
+warn: addt/sum   f16,f10,f11: non-standard trapping mode not supported
+warn: subt/sum   f11,f10,f0: non-standard trapping mode not supported

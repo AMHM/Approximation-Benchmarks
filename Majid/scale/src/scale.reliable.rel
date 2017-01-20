@@ -1,0 +1,109 @@
+#define ACCURACY_BILINEAR 1.0
+
+#define IDX(i,j,w) (i*w+j)
+#define R_COLOR(k) (3*k)
+#define G(k) (3*k+1)
+#define B(k) (3*k+2)
+
+extern float my_rand();
+extern float my_rand_float();
+extern float my_floor(float v);
+extern float my_ceil(float v);
+
+#define BILINEAR(ci, cj, nexti, nextj, previ, prevj, c_ul,c_ur,c_ll,c_lr) (1.0/((nexti-previ)*(nextj-prevj))*(c_lr*(nextj-cj)*(nexti-ci)+c_ur*(nextj-cj)*(ci-previ)+c_ll*(cj-prevj)*(nexti-ci)+c_ul*(cj-prevj)*(ci-previ)))
+
+
+void scale_body(float factor, int(1)<1.0*R(src)> src, int sw, int sh, int(1)<0.99*R(factor,src, transformed,sw,sh,dw,dh,i,j,si,sj)> transformed, int dw, int dh, int i, int j, float si, float sj) { 
+  
+  int previ = 0;
+  int prevj = 0;
+  int nexti = 0;
+  int nextj = 0;
+
+  int lr0 = 0; 
+  int lr1 = 0; 
+  int lr2 = 0; 
+
+  int ll0 = 0; 
+  int ll1 = 0; 
+  int ll2 = 0; 
+
+  int ul0 = 0; 
+  int ul1 = 0; 
+  int ul2 = 0; 
+
+  int ur0 = 0; 
+  int ur1 = 0; 
+  int ur2 = 0; 
+
+
+       
+        previ = (int) my_floor(si); 
+        prevj = (int) my_floor(sj);
+
+        nexti = (int) my_ceil(si); 
+        nextj = (int) my_ceil(sj);
+     
+        //clip coordinates
+        if (sh <= previ) {
+          previ = sh - 1;
+        }
+      
+        if (sw <= prevj) {
+          prevj = sw - 1;
+        }
+
+        if (sh <= nexti) {
+          nexti = sh - 1;
+        }
+      
+        if (sw <= nextj) {
+          nextj = sw - 1;
+        }
+
+       if (previ == nexti) {
+           if (0 == previ) {
+              if (sw - 1 == nexti) {
+                //1-pixel wide, use same pixel
+              } else {
+                nexti = nexti + 1;
+              }
+           } else {
+              previ = previ - 1;
+           }
+        } 
+
+        if (prevj == nextj) {
+           if (0 == prevj) {
+              if (sh - 1 == nextj) {
+                //1-pixel high, use same pixel
+              } else {
+                nextj = nextj + 1;
+              }
+           } else {
+              prevj = prevj - 1;
+           }
+        }   
+
+        lr0 = src[R_COLOR(IDX(previ, prevj,sw))];
+        lr1 = src[G(IDX(previ, prevj,sw))];
+        lr2 = src[B(IDX(previ, prevj,sw))];
+
+        ll0 = src[R_COLOR(IDX(previ, nextj,sw))];
+        ll1 = src[G(IDX(previ, nextj,sw))];
+        ll2 = src[B(IDX(previ, nextj,sw))];
+
+        ur0 = src[R_COLOR(IDX(nexti, prevj,sw))];
+        ur1 = src[G(IDX(nexti, prevj,sw))];
+        ur2 = src[B(IDX(nexti, prevj,sw))];
+
+        ul0 = src[R_COLOR(IDX(nexti, nextj,sw))];
+        ul1 = src[G(IDX(nexti, nextj,sw))];
+        ul2 = src[B(IDX(nexti, nextj,sw))];
+
+        transformed[R_COLOR(IDX(i,j,dw))]= (int) BILINEAR(si, sj, nexti, nextj, previ, prevj, ul0, ur0, ll0, lr0);
+        transformed[G(IDX(i,j,dw))]= (int) BILINEAR(si, sj, nexti, nextj, previ, prevj, ul1, ur1, ll1, lr1);
+        transformed[B(IDX(i,j,dw))]= (int) BILINEAR(si, sj, nexti, nextj, previ, prevj, ul2, ur2, ll2, lr2);
+  
+}
+
