@@ -1,0 +1,1191 @@
+Redirecting stdout to /home/majid/gem5/gem5-relax/tests/test-progs/susan/runs/lena-corners-480-2-relaxed-1/lena-corners-480-2-relaxed-1.out
+Redirecting stderr to /home/majid/gem5/gem5-relax/tests/test-progs/susan/runs/lena-corners-480-2-relaxed-1/lena-corners-480-2-relaxed-1.err
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Apr 21 2014 11:01:47
+gem5 started Apr 24 2014 17:42:56
+gem5 executing on drg.ics.uci.edu
+command line: /home/majid/gem5/gem5-relax/build/ALPHA/gem5.opt --redirect-stdout --redirect-stderr --stdout-file=/home/majid/gem5/gem5-relax/tests/test-progs/susan/runs/lena-corners-480-2-relaxed-1/lena-corners-480-2-relaxed-1.out --stderr-file=/home/majid/gem5/gem5-relax/tests/test-progs/susan/runs/lena-corners-480-2-relaxed-1/lena-corners-480-2-relaxed-1.err --outdir=/home/majid/gem5/gem5-relax/tests/test-progs/susan/runs/lena-corners-480-2-relaxed-1 --debug-flags=PseudoInst /home/majid/gem5/gem5-relax/configs/example/se_relax_cache.py --cpu-type=detailed --num-cpus=1 --sys-clock=2GHz --cpu-clock=2GHz --mem-type=ddr3_1600_x64 --mem-size=512MB --caches --l2cache --num-l2caches=1 --num-l3caches=0 --l1d_size=32kB --l1i_size=32kB --l2_size=512kB --l1d_assoc=4 --l1i_assoc=4 --l2_assoc=8 --cacheline_size=64 --fast-forward=3390 --maxinsts=100000000000000 --at-instruction --replacement_policy=random --l1_voltage_parameter_file=/home/majid/gem5/gem5-relax/ber_info/gem5params-L1-A.csv --l2_voltage_parameter_file=/home/majid/gem5/gem5-relax/ber_info/gem5params-L2-A.csv --vdd3_l1=480 --vdd2_l1=1000 --vdd1_l1=1000 --vdd3_l2=1000 --vdd2_l2=1000 --vdd1_l2=1000 --init_afb_l1=2 --init_afb_l2=0 --clean_ways_l1=1 --clean_ways_l2=8 -c /home/majid/gem5/gem5-relax/tests/test-progs/susan/bin/alpha/susan -o /home/majid/gem5/gem5-relax/tests/test-progs/susan/inputs/lena.pgm /home/majid/gem5/gem5-relax/tests/test-progs/susan/outputs/lena-corners-480-2-relaxed-1.pgm -c
+Global frequency set at 1000000000000 ticks per second
+info: Reading this cache's voltage parameter file...
+info: Reading this cache's voltage parameter file...
+info: Reading this cache's voltage parameter file...
+info: Generating fault maps for this cache
+info: Fault map generated
+info: Dumping cache fault map for VDDs [480 mV, 1000 mV, 1000 mV]...
+info: Block# = 0 ==>  0, 0, 0
+info: Block# = 1 ==>  0, 0, 0
+info: Block# = 2 ==>  1, 0, 0
+info: Block# = 3 ==>  2, 0, 0
+info: Block# = 4 ==>  0, 0, 0
+info: Block# = 5 ==>  2, 0, 0
+info: Block# = 6 ==>  1, 0, 0
+info: Block# = 7 ==>  0, 0, 0
+info: Block# = 8 ==>  0, 0, 0
+info: Block# = 9 ==>  2, 0, 0
+info: Block# = 10 ==>  3, 0, 0
+info: Block# = 11 ==>  1, 0, 0
+info: Block# = 12 ==>  0, 0, 0
+info: Block# = 13 ==>  3, 0, 0
+info: Block# = 14 ==>  1, 0, 0
+info: Block# = 15 ==>  1, 0, 0
+info: Block# = 16 ==>  0, 0, 0
+info: Block# = 17 ==>  1, 0, 0
+info: Block# = 18 ==>  2, 0, 0
+info: Block# = 19 ==>  1, 0, 0
+info: Block# = 20 ==>  0, 0, 0
+info: Block# = 21 ==>  3, 0, 0
+info: Block# = 22 ==>  0, 0, 0
+info: Block# = 23 ==>  2, 0, 0
+info: Block# = 24 ==>  0, 0, 0
+info: Block# = 25 ==>  2, 0, 0
+info: Block# = 26 ==>  1, 0, 0
+info: Block# = 27 ==>  1, 0, 0
+info: Block# = 28 ==>  0, 0, 0
+info: Block# = 29 ==>  3, 0, 0
+info: Block# = 30 ==>  4, 0, 0
+info: Block# = 31 ==>  3, 0, 0
+info: Block# = 32 ==>  0, 0, 0
+info: Block# = 33 ==>  2, 0, 0
+info: Block# = 34 ==>  3, 0, 0
+info: Block# = 35 ==>  0, 0, 0
+info: Block# = 36 ==>  0, 0, 0
+info: Block# = 37 ==>  4, 0, 0
+info: Block# = 38 ==>  0, 0, 0
+info: Block# = 39 ==>  1, 0, 0
+info: Block# = 40 ==>  0, 0, 0
+info: Block# = 41 ==>  4, 0, 0
+info: Block# = 42 ==>  6, 0, 0
+info: Block# = 43 ==>  1, 0, 0
+info: Block# = 44 ==>  0, 0, 0
+info: Block# = 45 ==>  1, 0, 0
+info: Block# = 46 ==>  3, 0, 0
+info: Block# = 47 ==>  1, 0, 0
+info: Block# = 48 ==>  0, 0, 0
+info: Block# = 49 ==>  0, 0, 0
+info: Block# = 50 ==>  0, 0, 0
+info: Block# = 51 ==>  0, 0, 0
+info: Block# = 52 ==>  0, 0, 0
+info: Block# = 53 ==>  4, 0, 0
+info: Block# = 54 ==>  3, 0, 0
+info: Block# = 55 ==>  3, 0, 0
+info: Block# = 56 ==>  0, 0, 0
+info: Block# = 57 ==>  2, 0, 0
+info: Block# = 58 ==>  5, 0, 0
+info: Block# = 59 ==>  1, 0, 0
+info: Block# = 60 ==>  0, 0, 0
+info: Block# = 61 ==>  1, 0, 0
+info: Block# = 62 ==>  1, 0, 0
+info: Block# = 63 ==>  4, 0, 0
+info: Block# = 64 ==>  0, 0, 0
+info: Block# = 65 ==>  5, 0, 0
+info: Block# = 66 ==>  2, 0, 0
+info: Block# = 67 ==>  2, 0, 0
+info: Block# = 68 ==>  0, 0, 0
+info: Block# = 69 ==>  0, 0, 0
+info: Block# = 70 ==>  0, 0, 0
+info: Block# = 71 ==>  0, 0, 0
+info: Block# = 72 ==>  0, 0, 0
+info: Block# = 73 ==>  2, 0, 0
+info: Block# = 74 ==>  3, 0, 0
+info: Block# = 75 ==>  2, 0, 0
+info: Block# = 76 ==>  0, 0, 0
+info: Block# = 77 ==>  3, 0, 0
+info: Block# = 78 ==>  5, 0, 0
+info: Block# = 79 ==>  1, 0, 0
+info: Block# = 80 ==>  0, 0, 0
+info: Block# = 81 ==>  2, 0, 0
+info: Block# = 82 ==>  3, 0, 0
+info: Block# = 83 ==>  1, 0, 0
+info: Block# = 84 ==>  0, 0, 0
+info: Block# = 85 ==>  2, 0, 0
+info: Block# = 86 ==>  2, 0, 0
+info: Block# = 87 ==>  1, 0, 0
+info: Block# = 88 ==>  0, 0, 0
+info: Block# = 89 ==>  1, 0, 0
+info: Block# = 90 ==>  3, 0, 0
+info: Block# = 91 ==>  4, 0, 0
+info: Block# = 92 ==>  0, 0, 0
+info: Block# = 93 ==>  2, 0, 0
+info: Block# = 94 ==>  1, 0, 0
+info: Block# = 95 ==>  0, 0, 0
+info: Block# = 96 ==>  0, 0, 0
+info: Block# = 97 ==>  3, 0, 0
+info: Block# = 98 ==>  1, 0, 0
+info: Block# = 99 ==>  2, 0, 0
+info: Block# = 100 ==>  0, 0, 0
+info: Block# = 101 ==>  2, 0, 0
+info: Block# = 102 ==>  1, 0, 0
+info: Block# = 103 ==>  5, 0, 0
+info: Block# = 104 ==>  0, 0, 0
+info: Block# = 105 ==>  0, 0, 0
+info: Block# = 106 ==>  1, 0, 0
+info: Block# = 107 ==>  0, 0, 0
+info: Block# = 108 ==>  0, 0, 0
+info: Block# = 109 ==>  0, 0, 0
+info: Block# = 110 ==>  1, 0, 0
+info: Block# = 111 ==>  0, 0, 0
+info: Block# = 112 ==>  0, 0, 0
+info: Block# = 113 ==>  2, 0, 0
+info: Block# = 114 ==>  3, 0, 0
+info: Block# = 115 ==>  3, 0, 0
+info: Block# = 116 ==>  0, 0, 0
+info: Block# = 117 ==>  1, 0, 0
+info: Block# = 118 ==>  1, 0, 0
+info: Block# = 119 ==>  2, 0, 0
+info: Block# = 120 ==>  0, 0, 0
+info: Block# = 121 ==>  1, 0, 0
+info: Block# = 122 ==>  0, 0, 0
+info: Block# = 123 ==>  1, 0, 0
+info: Block# = 124 ==>  0, 0, 0
+info: Block# = 125 ==>  0, 0, 0
+info: Block# = 126 ==>  2, 0, 0
+info: Block# = 127 ==>  2, 0, 0
+info: Block# = 128 ==>  0, 0, 0
+info: Block# = 129 ==>  1, 0, 0
+info: Block# = 130 ==>  3, 0, 0
+info: Block# = 131 ==>  0, 0, 0
+info: Block# = 132 ==>  0, 0, 0
+info: Block# = 133 ==>  1, 0, 0
+info: Block# = 134 ==>  4, 0, 0
+info: Block# = 135 ==>  3, 0, 0
+info: Block# = 136 ==>  0, 0, 0
+info: Block# = 137 ==>  4, 0, 0
+info: Block# = 138 ==>  6, 0, 0
+info: Block# = 139 ==>  2, 0, 0
+info: Block# = 140 ==>  0, 0, 0
+info: Block# = 141 ==>  2, 0, 0
+info: Block# = 142 ==>  2, 0, 0
+info: Block# = 143 ==>  0, 0, 0
+info: Block# = 144 ==>  0, 0, 0
+info: Block# = 145 ==>  1, 0, 0
+info: Block# = 146 ==>  1, 0, 0
+info: Block# = 147 ==>  2, 0, 0
+info: Block# = 148 ==>  0, 0, 0
+info: Block# = 149 ==>  2, 0, 0
+info: Block# = 150 ==>  2, 0, 0
+info: Block# = 151 ==>  1, 0, 0
+info: Block# = 152 ==>  0, 0, 0
+info: Block# = 153 ==>  0, 0, 0
+info: Block# = 154 ==>  3, 0, 0
+info: Block# = 155 ==>  0, 0, 0
+info: Block# = 156 ==>  0, 0, 0
+info: Block# = 157 ==>  3, 0, 0
+info: Block# = 158 ==>  3, 0, 0
+info: Block# = 159 ==>  3, 0, 0
+info: Block# = 160 ==>  0, 0, 0
+info: Block# = 161 ==>  1, 0, 0
+info: Block# = 162 ==>  3, 0, 0
+info: Block# = 163 ==>  0, 0, 0
+info: Block# = 164 ==>  0, 0, 0
+info: Block# = 165 ==>  2, 0, 0
+info: Block# = 166 ==>  0, 0, 0
+info: Block# = 167 ==>  4, 0, 0
+info: Block# = 168 ==>  0, 0, 0
+info: Block# = 169 ==>  0, 0, 0
+info: Block# = 170 ==>  1, 0, 0
+info: Block# = 171 ==>  2, 0, 0
+info: Block# = 172 ==>  0, 0, 0
+info: Block# = 173 ==>  1, 0, 0
+info: Block# = 174 ==>  1, 0, 0
+info: Block# = 175 ==>  0, 0, 0
+info: Block# = 176 ==>  0, 0, 0
+info: Block# = 177 ==>  1, 0, 0
+info: Block# = 178 ==>  1, 0, 0
+info: Block# = 179 ==>  5, 0, 0
+info: Block# = 180 ==>  0, 0, 0
+info: Block# = 181 ==>  4, 0, 0
+info: Block# = 182 ==>  1, 0, 0
+info: Block# = 183 ==>  0, 0, 0
+info: Block# = 184 ==>  0, 0, 0
+info: Block# = 185 ==>  1, 0, 0
+info: Block# = 186 ==>  2, 0, 0
+info: Block# = 187 ==>  1, 0, 0
+info: Block# = 188 ==>  0, 0, 0
+info: Block# = 189 ==>  1, 0, 0
+info: Block# = 190 ==>  3, 0, 0
+info: Block# = 191 ==>  1, 0, 0
+info: Block# = 192 ==>  0, 0, 0
+info: Block# = 193 ==>  1, 0, 0
+info: Block# = 194 ==>  3, 0, 0
+info: Block# = 195 ==>  2, 0, 0
+info: Block# = 196 ==>  0, 0, 0
+info: Block# = 197 ==>  2, 0, 0
+info: Block# = 198 ==>  2, 0, 0
+info: Block# = 199 ==>  0, 0, 0
+info: Block# = 200 ==>  0, 0, 0
+info: Block# = 201 ==>  0, 0, 0
+info: Block# = 202 ==>  0, 0, 0
+info: Block# = 203 ==>  1, 0, 0
+info: Block# = 204 ==>  0, 0, 0
+info: Block# = 205 ==>  1, 0, 0
+info: Block# = 206 ==>  0, 0, 0
+info: Block# = 207 ==>  2, 0, 0
+info: Block# = 208 ==>  0, 0, 0
+info: Block# = 209 ==>  1, 0, 0
+info: Block# = 210 ==>  0, 0, 0
+info: Block# = 211 ==>  5, 0, 0
+info: Block# = 212 ==>  0, 0, 0
+info: Block# = 213 ==>  4, 0, 0
+info: Block# = 214 ==>  2, 0, 0
+info: Block# = 215 ==>  0, 0, 0
+info: Block# = 216 ==>  0, 0, 0
+info: Block# = 217 ==>  2, 0, 0
+info: Block# = 218 ==>  7, 0, 0
+info: Block# = 219 ==>  0, 0, 0
+info: Block# = 220 ==>  0, 0, 0
+info: Block# = 221 ==>  2, 0, 0
+info: Block# = 222 ==>  2, 0, 0
+info: Block# = 223 ==>  3, 0, 0
+info: Block# = 224 ==>  0, 0, 0
+info: Block# = 225 ==>  1, 0, 0
+info: Block# = 226 ==>  3, 0, 0
+info: Block# = 227 ==>  1, 0, 0
+info: Block# = 228 ==>  0, 0, 0
+info: Block# = 229 ==>  3, 0, 0
+info: Block# = 230 ==>  1, 0, 0
+info: Block# = 231 ==>  2, 0, 0
+info: Block# = 232 ==>  0, 0, 0
+info: Block# = 233 ==>  2, 0, 0
+info: Block# = 234 ==>  2, 0, 0
+info: Block# = 235 ==>  0, 0, 0
+info: Block# = 236 ==>  0, 0, 0
+info: Block# = 237 ==>  0, 0, 0
+info: Block# = 238 ==>  3, 0, 0
+info: Block# = 239 ==>  1, 0, 0
+info: Block# = 240 ==>  0, 0, 0
+info: Block# = 241 ==>  1, 0, 0
+info: Block# = 242 ==>  2, 0, 0
+info: Block# = 243 ==>  1, 0, 0
+info: Block# = 244 ==>  0, 0, 0
+info: Block# = 245 ==>  1, 0, 0
+info: Block# = 246 ==>  0, 0, 0
+info: Block# = 247 ==>  0, 0, 0
+info: Block# = 248 ==>  0, 0, 0
+info: Block# = 249 ==>  2, 0, 0
+info: Block# = 250 ==>  0, 0, 0
+info: Block# = 251 ==>  1, 0, 0
+info: Block# = 252 ==>  0, 0, 0
+info: Block# = 253 ==>  5, 0, 0
+info: Block# = 254 ==>  2, 0, 0
+info: Block# = 255 ==>  2, 0, 0
+info: Block# = 256 ==>  0, 0, 0
+info: Block# = 257 ==>  2, 0, 0
+info: Block# = 258 ==>  0, 0, 0
+info: Block# = 259 ==>  1, 0, 0
+info: Block# = 260 ==>  0, 0, 0
+info: Block# = 261 ==>  1, 0, 0
+info: Block# = 262 ==>  1, 0, 0
+info: Block# = 263 ==>  0, 0, 0
+info: Block# = 264 ==>  0, 0, 0
+info: Block# = 265 ==>  0, 0, 0
+info: Block# = 266 ==>  4, 0, 0
+info: Block# = 267 ==>  3, 0, 0
+info: Block# = 268 ==>  0, 0, 0
+info: Block# = 269 ==>  2, 0, 0
+info: Block# = 270 ==>  1, 0, 0
+info: Block# = 271 ==>  1, 0, 0
+info: Block# = 272 ==>  0, 0, 0
+info: Block# = 273 ==>  1, 0, 0
+info: Block# = 274 ==>  2, 0, 0
+info: Block# = 275 ==>  2, 0, 0
+info: Block# = 276 ==>  0, 0, 0
+info: Block# = 277 ==>  0, 0, 0
+info: Block# = 278 ==>  1, 0, 0
+info: Block# = 279 ==>  1, 0, 0
+info: Block# = 280 ==>  0, 0, 0
+info: Block# = 281 ==>  1, 0, 0
+info: Block# = 282 ==>  1, 0, 0
+info: Block# = 283 ==>  1, 0, 0
+info: Block# = 284 ==>  0, 0, 0
+info: Block# = 285 ==>  4, 0, 0
+info: Block# = 286 ==>  1, 0, 0
+info: Block# = 287 ==>  1, 0, 0
+info: Block# = 288 ==>  0, 0, 0
+info: Block# = 289 ==>  1, 0, 0
+info: Block# = 290 ==>  1, 0, 0
+info: Block# = 291 ==>  1, 0, 0
+info: Block# = 292 ==>  0, 0, 0
+info: Block# = 293 ==>  2, 0, 0
+info: Block# = 294 ==>  3, 0, 0
+info: Block# = 295 ==>  1, 0, 0
+info: Block# = 296 ==>  0, 0, 0
+info: Block# = 297 ==>  4, 0, 0
+info: Block# = 298 ==>  1, 0, 0
+info: Block# = 299 ==>  2, 0, 0
+info: Block# = 300 ==>  0, 0, 0
+info: Block# = 301 ==>  0, 0, 0
+info: Block# = 302 ==>  4, 0, 0
+info: Block# = 303 ==>  0, 0, 0
+info: Block# = 304 ==>  0, 0, 0
+info: Block# = 305 ==>  2, 0, 0
+info: Block# = 306 ==>  0, 0, 0
+info: Block# = 307 ==>  1, 0, 0
+info: Block# = 308 ==>  0, 0, 0
+info: Block# = 309 ==>  2, 0, 0
+info: Block# = 310 ==>  1, 0, 0
+info: Block# = 311 ==>  0, 0, 0
+info: Block# = 312 ==>  0, 0, 0
+info: Block# = 313 ==>  0, 0, 0
+info: Block# = 314 ==>  2, 0, 0
+info: Block# = 315 ==>  1, 0, 0
+info: Block# = 316 ==>  0, 0, 0
+info: Block# = 317 ==>  1, 0, 0
+info: Block# = 318 ==>  1, 0, 0
+info: Block# = 319 ==>  1, 0, 0
+info: Block# = 320 ==>  0, 0, 0
+info: Block# = 321 ==>  2, 0, 0
+info: Block# = 322 ==>  3, 0, 0
+info: Block# = 323 ==>  0, 0, 0
+info: Block# = 324 ==>  0, 0, 0
+info: Block# = 325 ==>  1, 0, 0
+info: Block# = 326 ==>  3, 0, 0
+info: Block# = 327 ==>  1, 0, 0
+info: Block# = 328 ==>  0, 0, 0
+info: Block# = 329 ==>  3, 0, 0
+info: Block# = 330 ==>  2, 0, 0
+info: Block# = 331 ==>  1, 0, 0
+info: Block# = 332 ==>  0, 0, 0
+info: Block# = 333 ==>  2, 0, 0
+info: Block# = 334 ==>  2, 0, 0
+info: Block# = 335 ==>  1, 0, 0
+info: Block# = 336 ==>  0, 0, 0
+info: Block# = 337 ==>  4, 0, 0
+info: Block# = 338 ==>  1, 0, 0
+info: Block# = 339 ==>  1, 0, 0
+info: Block# = 340 ==>  0, 0, 0
+info: Block# = 341 ==>  4, 0, 0
+info: Block# = 342 ==>  3, 0, 0
+info: Block# = 343 ==>  2, 0, 0
+info: Block# = 344 ==>  0, 0, 0
+info: Block# = 345 ==>  1, 0, 0
+info: Block# = 346 ==>  2, 0, 0
+info: Block# = 347 ==>  2, 0, 0
+info: Block# = 348 ==>  0, 0, 0
+info: Block# = 349 ==>  1, 0, 0
+info: Block# = 350 ==>  2, 0, 0
+info: Block# = 351 ==>  3, 0, 0
+info: Block# = 352 ==>  0, 0, 0
+info: Block# = 353 ==>  1, 0, 0
+info: Block# = 354 ==>  3, 0, 0
+info: Block# = 355 ==>  1, 0, 0
+info: Block# = 356 ==>  0, 0, 0
+info: Block# = 357 ==>  1, 0, 0
+info: Block# = 358 ==>  2, 0, 0
+info: Block# = 359 ==>  3, 0, 0
+info: Block# = 360 ==>  0, 0, 0
+info: Block# = 361 ==>  2, 0, 0
+info: Block# = 362 ==>  1, 0, 0
+info: Block# = 363 ==>  3, 0, 0
+info: Block# = 364 ==>  0, 0, 0
+info: Block# = 365 ==>  6, 0, 0
+info: Block# = 366 ==>  0, 0, 0
+info: Block# = 367 ==>  1, 0, 0
+info: Block# = 368 ==>  0, 0, 0
+info: Block# = 369 ==>  1, 0, 0
+info: Block# = 370 ==>  0, 0, 0
+info: Block# = 371 ==>  2, 0, 0
+info: Block# = 372 ==>  0, 0, 0
+info: Block# = 373 ==>  1, 0, 0
+info: Block# = 374 ==>  2, 0, 0
+info: Block# = 375 ==>  1, 0, 0
+info: Block# = 376 ==>  0, 0, 0
+info: Block# = 377 ==>  0, 0, 0
+info: Block# = 378 ==>  0, 0, 0
+info: Block# = 379 ==>  0, 0, 0
+info: Block# = 380 ==>  0, 0, 0
+info: Block# = 381 ==>  2, 0, 0
+info: Block# = 382 ==>  1, 0, 0
+info: Block# = 383 ==>  4, 0, 0
+info: Block# = 384 ==>  0, 0, 0
+info: Block# = 385 ==>  1, 0, 0
+info: Block# = 386 ==>  2, 0, 0
+info: Block# = 387 ==>  3, 0, 0
+info: Block# = 388 ==>  0, 0, 0
+info: Block# = 389 ==>  1, 0, 0
+info: Block# = 390 ==>  2, 0, 0
+info: Block# = 391 ==>  1, 0, 0
+info: Block# = 392 ==>  0, 0, 0
+info: Block# = 393 ==>  1, 0, 0
+info: Block# = 394 ==>  1, 0, 0
+info: Block# = 395 ==>  1, 0, 0
+info: Block# = 396 ==>  0, 0, 0
+info: Block# = 397 ==>  2, 0, 0
+info: Block# = 398 ==>  2, 0, 0
+info: Block# = 399 ==>  0, 0, 0
+info: Block# = 400 ==>  0, 0, 0
+info: Block# = 401 ==>  0, 0, 0
+info: Block# = 402 ==>  1, 0, 0
+info: Block# = 403 ==>  4, 0, 0
+info: Block# = 404 ==>  0, 0, 0
+info: Block# = 405 ==>  2, 0, 0
+info: Block# = 406 ==>  3, 0, 0
+info: Block# = 407 ==>  4, 0, 0
+info: Block# = 408 ==>  0, 0, 0
+info: Block# = 409 ==>  2, 0, 0
+info: Block# = 410 ==>  0, 0, 0
+info: Block# = 411 ==>  1, 0, 0
+info: Block# = 412 ==>  0, 0, 0
+info: Block# = 413 ==>  0, 0, 0
+info: Block# = 414 ==>  1, 0, 0
+info: Block# = 415 ==>  1, 0, 0
+info: Block# = 416 ==>  0, 0, 0
+info: Block# = 417 ==>  1, 0, 0
+info: Block# = 418 ==>  2, 0, 0
+info: Block# = 419 ==>  2, 0, 0
+info: Block# = 420 ==>  0, 0, 0
+info: Block# = 421 ==>  4, 0, 0
+info: Block# = 422 ==>  6, 0, 0
+info: Block# = 423 ==>  2, 0, 0
+info: Block# = 424 ==>  0, 0, 0
+info: Block# = 425 ==>  2, 0, 0
+info: Block# = 426 ==>  2, 0, 0
+info: Block# = 427 ==>  1, 0, 0
+info: Block# = 428 ==>  0, 0, 0
+info: Block# = 429 ==>  3, 0, 0
+info: Block# = 430 ==>  1, 0, 0
+info: Block# = 431 ==>  2, 0, 0
+info: Block# = 432 ==>  0, 0, 0
+info: Block# = 433 ==>  3, 0, 0
+info: Block# = 434 ==>  1, 0, 0
+info: Block# = 435 ==>  1, 0, 0
+info: Block# = 436 ==>  0, 0, 0
+info: Block# = 437 ==>  2, 0, 0
+info: Block# = 438 ==>  0, 0, 0
+info: Block# = 439 ==>  1, 0, 0
+info: Block# = 440 ==>  0, 0, 0
+info: Block# = 441 ==>  0, 0, 0
+info: Block# = 442 ==>  3, 0, 0
+info: Block# = 443 ==>  2, 0, 0
+info: Block# = 444 ==>  0, 0, 0
+info: Block# = 445 ==>  2, 0, 0
+info: Block# = 446 ==>  3, 0, 0
+info: Block# = 447 ==>  2, 0, 0
+info: Block# = 448 ==>  0, 0, 0
+info: Block# = 449 ==>  0, 0, 0
+info: Block# = 450 ==>  0, 0, 0
+info: Block# = 451 ==>  1, 0, 0
+info: Block# = 452 ==>  0, 0, 0
+info: Block# = 453 ==>  0, 0, 0
+info: Block# = 454 ==>  3, 0, 0
+info: Block# = 455 ==>  2, 0, 0
+info: Block# = 456 ==>  0, 0, 0
+info: Block# = 457 ==>  2, 0, 0
+info: Block# = 458 ==>  0, 0, 0
+info: Block# = 459 ==>  0, 0, 0
+info: Block# = 460 ==>  0, 0, 0
+info: Block# = 461 ==>  2, 0, 0
+info: Block# = 462 ==>  6, 0, 0
+info: Block# = 463 ==>  0, 0, 0
+info: Block# = 464 ==>  0, 0, 0
+info: Block# = 465 ==>  3, 0, 0
+info: Block# = 466 ==>  3, 0, 0
+info: Block# = 467 ==>  1, 0, 0
+info: Block# = 468 ==>  0, 0, 0
+info: Block# = 469 ==>  1, 0, 0
+info: Block# = 470 ==>  2, 0, 0
+info: Block# = 471 ==>  0, 0, 0
+info: Block# = 472 ==>  0, 0, 0
+info: Block# = 473 ==>  1, 0, 0
+info: Block# = 474 ==>  1, 0, 0
+info: Block# = 475 ==>  0, 0, 0
+info: Block# = 476 ==>  0, 0, 0
+info: Block# = 477 ==>  3, 0, 0
+info: Block# = 478 ==>  3, 0, 0
+info: Block# = 479 ==>  1, 0, 0
+info: Block# = 480 ==>  0, 0, 0
+info: Block# = 481 ==>  1, 0, 0
+info: Block# = 482 ==>  4, 0, 0
+info: Block# = 483 ==>  3, 0, 0
+info: Block# = 484 ==>  0, 0, 0
+info: Block# = 485 ==>  0, 0, 0
+info: Block# = 486 ==>  2, 0, 0
+info: Block# = 487 ==>  1, 0, 0
+info: Block# = 488 ==>  0, 0, 0
+info: Block# = 489 ==>  4, 0, 0
+info: Block# = 490 ==>  1, 0, 0
+info: Block# = 491 ==>  2, 0, 0
+info: Block# = 492 ==>  0, 0, 0
+info: Block# = 493 ==>  1, 0, 0
+info: Block# = 494 ==>  1, 0, 0
+info: Block# = 495 ==>  1, 0, 0
+info: Block# = 496 ==>  0, 0, 0
+info: Block# = 497 ==>  2, 0, 0
+info: Block# = 498 ==>  2, 0, 0
+info: Block# = 499 ==>  2, 0, 0
+info: Block# = 500 ==>  0, 0, 0
+info: Block# = 501 ==>  3, 0, 0
+info: Block# = 502 ==>  0, 0, 0
+info: Block# = 503 ==>  2, 0, 0
+info: Block# = 504 ==>  0, 0, 0
+info: Block# = 505 ==>  1, 0, 0
+info: Block# = 506 ==>  2, 0, 0
+info: Block# = 507 ==>  1, 0, 0
+info: Block# = 508 ==>  0, 0, 0
+info: Block# = 509 ==>  3, 0, 0
+info: Block# = 510 ==>  2, 0, 0
+info: Block# = 511 ==>  1, 0, 0
+info: Block [2][2] disabled and invalidated 
+info: Block [3][1] disabled and invalidated 
+info: Block [5][1] disabled and invalidated 
+info: Block [7][1] disabled and invalidated 
+info: Block [7][2] disabled and invalidated 
+info: Block [7][3] disabled and invalidated 
+info: Block [8][2] disabled and invalidated 
+info: Block [9][1] disabled and invalidated 
+info: Block [10][1] disabled and invalidated 
+info: Block [10][2] disabled and invalidated 
+info: Block [11][2] disabled and invalidated 
+info: Block [13][1] disabled and invalidated 
+info: Block [13][2] disabled and invalidated 
+info: Block [13][3] disabled and invalidated 
+info: Block [14][2] disabled and invalidated 
+info: Block [15][3] disabled and invalidated 
+info: Block [16][1] disabled and invalidated 
+info: Block [18][2] disabled and invalidated 
+info: Block [19][1] disabled and invalidated 
+info: Block [19][2] disabled and invalidated 
+info: Block [20][2] disabled and invalidated 
+info: Block [22][2] disabled and invalidated 
+info: Block [22][3] disabled and invalidated 
+info: Block [24][1] disabled and invalidated 
+info: Block [25][3] disabled and invalidated 
+info: Block [28][2] disabled and invalidated 
+info: Block [28][3] disabled and invalidated 
+info: Block [32][2] disabled and invalidated 
+info: Block [33][2] disabled and invalidated 
+info: Block [33][3] disabled and invalidated 
+info: Block [34][1] disabled and invalidated 
+info: Block [34][2] disabled and invalidated 
+info: Block [38][2] disabled and invalidated 
+info: Block [39][1] disabled and invalidated 
+info: Block [39][2] disabled and invalidated 
+info: Block [39][3] disabled and invalidated 
+info: Block [40][2] disabled and invalidated 
+info: Block [41][3] disabled and invalidated 
+info: Block [44][3] disabled and invalidated 
+info: Block [45][1] disabled and invalidated 
+info: Block [47][2] disabled and invalidated 
+info: Block [48][2] disabled and invalidated 
+info: Block [52][3] disabled and invalidated 
+info: Block [53][1] disabled and invalidated 
+info: Block [54][2] disabled and invalidated 
+info: Block [55][3] disabled and invalidated 
+info: Block [56][2] disabled and invalidated 
+info: Block [57][1] disabled and invalidated 
+info: Block [59][2] disabled and invalidated 
+info: Block [63][1] disabled and invalidated 
+info: Block [66][2] disabled and invalidated 
+info: Block [66][3] disabled and invalidated 
+info: Block [71][1] disabled and invalidated 
+info: Block [73][2] disabled and invalidated 
+info: Block [74][1] disabled and invalidated 
+info: Block [75][2] disabled and invalidated 
+info: Block [80][2] disabled and invalidated 
+info: Block [81][2] disabled and invalidated 
+info: Block [82][1] disabled and invalidated 
+info: Block [84][1] disabled and invalidated 
+info: Block [85][1] disabled and invalidated 
+info: Block [85][2] disabled and invalidated 
+info: Block [87][3] disabled and invalidated 
+info: Block [88][2] disabled and invalidated 
+info: Block [89][3] disabled and invalidated 
+info: Block [90][3] disabled and invalidated 
+info: Block [91][1] disabled and invalidated 
+info: Block [95][3] disabled and invalidated 
+info: Block [96][3] disabled and invalidated 
+info: Block [100][3] disabled and invalidated 
+info: Block [101][2] disabled and invalidated 
+info: Block [101][3] disabled and invalidated 
+info: Block [105][1] disabled and invalidated 
+info: Block [105][2] disabled and invalidated 
+info: Block [107][1] disabled and invalidated 
+info: Block [108][1] disabled and invalidated 
+info: Block [110][2] disabled and invalidated 
+info: Block [111][2] disabled and invalidated 
+info: Block [113][2] disabled and invalidated 
+info: Block [115][2] disabled and invalidated 
+info: Block [116][1] disabled and invalidated 
+info: Block [116][2] disabled and invalidated 
+info: Block [119][1] disabled and invalidated 
+info: Block [119][2] disabled and invalidated 
+info: Block [120][2] disabled and invalidated 
+info: Block [120][3] disabled and invalidated 
+info: Block [122][1] disabled and invalidated 
+info: Block [125][1] disabled and invalidated 
+info: Block [127][1] disabled and invalidated 
+info: Dumping cache status for current VDD = 480 mV and AFB = 2...
+info: Status Bits: Disabled, Faulty, HWPrefetched, Referenced | Dirty, Readable, Writable, Valid
+info: Block# = 0 ==>  0
+info: Block# = 1 ==>  0
+info: Block# = 2 ==> 40
+info: Block# = 3 ==> 40
+info: Block# = 4 ==>  0
+info: Block# = 5 ==> 40
+info: Block# = 6 ==> 40
+info: Block# = 7 ==>  0
+info: Block# = 8 ==>  0
+info: Block# = 9 ==> 40
+info: Block# = 10 ==> c0
+info: Block# = 11 ==> 40
+info: Block# = 12 ==>  0
+info: Block# = 13 ==> c0
+info: Block# = 14 ==> 40
+info: Block# = 15 ==> 40
+info: Block# = 16 ==>  0
+info: Block# = 17 ==> 40
+info: Block# = 18 ==> 40
+info: Block# = 19 ==> 40
+info: Block# = 20 ==>  0
+info: Block# = 21 ==> c0
+info: Block# = 22 ==>  0
+info: Block# = 23 ==> 40
+info: Block# = 24 ==>  0
+info: Block# = 25 ==> 40
+info: Block# = 26 ==> 40
+info: Block# = 27 ==> 40
+info: Block# = 28 ==>  0
+info: Block# = 29 ==> c0
+info: Block# = 30 ==> c0
+info: Block# = 31 ==> c0
+info: Block# = 32 ==>  0
+info: Block# = 33 ==> 40
+info: Block# = 34 ==> c0
+info: Block# = 35 ==>  0
+info: Block# = 36 ==>  0
+info: Block# = 37 ==> c0
+info: Block# = 38 ==>  0
+info: Block# = 39 ==> 40
+info: Block# = 40 ==>  0
+info: Block# = 41 ==> c0
+info: Block# = 42 ==> c0
+info: Block# = 43 ==> 40
+info: Block# = 44 ==>  0
+info: Block# = 45 ==> 40
+info: Block# = 46 ==> c0
+info: Block# = 47 ==> 40
+info: Block# = 48 ==>  0
+info: Block# = 49 ==>  0
+info: Block# = 50 ==>  0
+info: Block# = 51 ==>  0
+info: Block# = 52 ==>  0
+info: Block# = 53 ==> c0
+info: Block# = 54 ==> c0
+info: Block# = 55 ==> c0
+info: Block# = 56 ==>  0
+info: Block# = 57 ==> 40
+info: Block# = 58 ==> c0
+info: Block# = 59 ==> 40
+info: Block# = 60 ==>  0
+info: Block# = 61 ==> 40
+info: Block# = 62 ==> 40
+info: Block# = 63 ==> c0
+info: Block# = 64 ==>  0
+info: Block# = 65 ==> c0
+info: Block# = 66 ==> 40
+info: Block# = 67 ==> 40
+info: Block# = 68 ==>  0
+info: Block# = 69 ==>  0
+info: Block# = 70 ==>  0
+info: Block# = 71 ==>  0
+info: Block# = 72 ==>  0
+info: Block# = 73 ==> 40
+info: Block# = 74 ==> c0
+info: Block# = 75 ==> 40
+info: Block# = 76 ==>  0
+info: Block# = 77 ==> c0
+info: Block# = 78 ==> c0
+info: Block# = 79 ==> 40
+info: Block# = 80 ==>  0
+info: Block# = 81 ==> 40
+info: Block# = 82 ==> c0
+info: Block# = 83 ==> 40
+info: Block# = 84 ==>  0
+info: Block# = 85 ==> 40
+info: Block# = 86 ==> 40
+info: Block# = 87 ==> 40
+info: Block# = 88 ==>  0
+info: Block# = 89 ==> 40
+info: Block# = 90 ==> c0
+info: Block# = 91 ==> c0
+info: Block# = 92 ==>  0
+info: Block# = 93 ==> 40
+info: Block# = 94 ==> 40
+info: Block# = 95 ==>  0
+info: Block# = 96 ==>  0
+info: Block# = 97 ==> c0
+info: Block# = 98 ==> 40
+info: Block# = 99 ==> 40
+info: Block# = 100 ==>  0
+info: Block# = 101 ==> 40
+info: Block# = 102 ==> 40
+info: Block# = 103 ==> c0
+info: Block# = 104 ==>  0
+info: Block# = 105 ==>  0
+info: Block# = 106 ==> 40
+info: Block# = 107 ==>  0
+info: Block# = 108 ==>  0
+info: Block# = 109 ==>  0
+info: Block# = 110 ==> 40
+info: Block# = 111 ==>  0
+info: Block# = 112 ==>  0
+info: Block# = 113 ==> 40
+info: Block# = 114 ==> c0
+info: Block# = 115 ==> c0
+info: Block# = 116 ==>  0
+info: Block# = 117 ==> 40
+info: Block# = 118 ==> 40
+info: Block# = 119 ==> 40
+info: Block# = 120 ==>  0
+info: Block# = 121 ==> 40
+info: Block# = 122 ==>  0
+info: Block# = 123 ==> 40
+info: Block# = 124 ==>  0
+info: Block# = 125 ==>  0
+info: Block# = 126 ==> 40
+info: Block# = 127 ==> 40
+info: Block# = 128 ==>  0
+info: Block# = 129 ==> 40
+info: Block# = 130 ==> c0
+info: Block# = 131 ==>  0
+info: Block# = 132 ==>  0
+info: Block# = 133 ==> 40
+info: Block# = 134 ==> c0
+info: Block# = 135 ==> c0
+info: Block# = 136 ==>  0
+info: Block# = 137 ==> c0
+info: Block# = 138 ==> c0
+info: Block# = 139 ==> 40
+info: Block# = 140 ==>  0
+info: Block# = 141 ==> 40
+info: Block# = 142 ==> 40
+info: Block# = 143 ==>  0
+info: Block# = 144 ==>  0
+info: Block# = 145 ==> 40
+info: Block# = 146 ==> 40
+info: Block# = 147 ==> 40
+info: Block# = 148 ==>  0
+info: Block# = 149 ==> 40
+info: Block# = 150 ==> 40
+info: Block# = 151 ==> 40
+info: Block# = 152 ==>  0
+info: Block# = 153 ==>  0
+info: Block# = 154 ==> c0
+info: Block# = 155 ==>  0
+info: Block# = 156 ==>  0
+info: Block# = 157 ==> c0
+info: Block# = 158 ==> c0
+info: Block# = 159 ==> c0
+info: Block# = 160 ==>  0
+info: Block# = 161 ==> 40
+info: Block# = 162 ==> c0
+info: Block# = 163 ==>  0
+info: Block# = 164 ==>  0
+info: Block# = 165 ==> 40
+info: Block# = 166 ==>  0
+info: Block# = 167 ==> c0
+info: Block# = 168 ==>  0
+info: Block# = 169 ==>  0
+info: Block# = 170 ==> 40
+info: Block# = 171 ==> 40
+info: Block# = 172 ==>  0
+info: Block# = 173 ==> 40
+info: Block# = 174 ==> 40
+info: Block# = 175 ==>  0
+info: Block# = 176 ==>  0
+info: Block# = 177 ==> 40
+info: Block# = 178 ==> 40
+info: Block# = 179 ==> c0
+info: Block# = 180 ==>  0
+info: Block# = 181 ==> c0
+info: Block# = 182 ==> 40
+info: Block# = 183 ==>  0
+info: Block# = 184 ==>  0
+info: Block# = 185 ==> 40
+info: Block# = 186 ==> 40
+info: Block# = 187 ==> 40
+info: Block# = 188 ==>  0
+info: Block# = 189 ==> 40
+info: Block# = 190 ==> c0
+info: Block# = 191 ==> 40
+info: Block# = 192 ==>  0
+info: Block# = 193 ==> 40
+info: Block# = 194 ==> c0
+info: Block# = 195 ==> 40
+info: Block# = 196 ==>  0
+info: Block# = 197 ==> 40
+info: Block# = 198 ==> 40
+info: Block# = 199 ==>  0
+info: Block# = 200 ==>  0
+info: Block# = 201 ==>  0
+info: Block# = 202 ==>  0
+info: Block# = 203 ==> 40
+info: Block# = 204 ==>  0
+info: Block# = 205 ==> 40
+info: Block# = 206 ==>  0
+info: Block# = 207 ==> 40
+info: Block# = 208 ==>  0
+info: Block# = 209 ==> 40
+info: Block# = 210 ==>  0
+info: Block# = 211 ==> c0
+info: Block# = 212 ==>  0
+info: Block# = 213 ==> c0
+info: Block# = 214 ==> 40
+info: Block# = 215 ==>  0
+info: Block# = 216 ==>  0
+info: Block# = 217 ==> 40
+info: Block# = 218 ==> c0
+info: Block# = 219 ==>  0
+info: Block# = 220 ==>  0
+info: Block# = 221 ==> 40
+info: Block# = 222 ==> 40
+info: Block# = 223 ==> c0
+info: Block# = 224 ==>  0
+info: Block# = 225 ==> 40
+info: Block# = 226 ==> c0
+info: Block# = 227 ==> 40
+info: Block# = 228 ==>  0
+info: Block# = 229 ==> c0
+info: Block# = 230 ==> 40
+info: Block# = 231 ==> 40
+info: Block# = 232 ==>  0
+info: Block# = 233 ==> 40
+info: Block# = 234 ==> 40
+info: Block# = 235 ==>  0
+info: Block# = 236 ==>  0
+info: Block# = 237 ==>  0
+info: Block# = 238 ==> c0
+info: Block# = 239 ==> 40
+info: Block# = 240 ==>  0
+info: Block# = 241 ==> 40
+info: Block# = 242 ==> 40
+info: Block# = 243 ==> 40
+info: Block# = 244 ==>  0
+info: Block# = 245 ==> 40
+info: Block# = 246 ==>  0
+info: Block# = 247 ==>  0
+info: Block# = 248 ==>  0
+info: Block# = 249 ==> 40
+info: Block# = 250 ==>  0
+info: Block# = 251 ==> 40
+info: Block# = 252 ==>  0
+info: Block# = 253 ==> c0
+info: Block# = 254 ==> 40
+info: Block# = 255 ==> 40
+info: Block# = 256 ==>  0
+info: Block# = 257 ==> 40
+info: Block# = 258 ==>  0
+info: Block# = 259 ==> 40
+info: Block# = 260 ==>  0
+info: Block# = 261 ==> 40
+info: Block# = 262 ==> 40
+info: Block# = 263 ==>  0
+info: Block# = 264 ==>  0
+info: Block# = 265 ==>  0
+info: Block# = 266 ==> c0
+info: Block# = 267 ==> c0
+info: Block# = 268 ==>  0
+info: Block# = 269 ==> 40
+info: Block# = 270 ==> 40
+info: Block# = 271 ==> 40
+info: Block# = 272 ==>  0
+info: Block# = 273 ==> 40
+info: Block# = 274 ==> 40
+info: Block# = 275 ==> 40
+info: Block# = 276 ==>  0
+info: Block# = 277 ==>  0
+info: Block# = 278 ==> 40
+info: Block# = 279 ==> 40
+info: Block# = 280 ==>  0
+info: Block# = 281 ==> 40
+info: Block# = 282 ==> 40
+info: Block# = 283 ==> 40
+info: Block# = 284 ==>  0
+info: Block# = 285 ==> c0
+info: Block# = 286 ==> 40
+info: Block# = 287 ==> 40
+info: Block# = 288 ==>  0
+info: Block# = 289 ==> 40
+info: Block# = 290 ==> 40
+info: Block# = 291 ==> 40
+info: Block# = 292 ==>  0
+info: Block# = 293 ==> 40
+info: Block# = 294 ==> c0
+info: Block# = 295 ==> 40
+info: Block# = 296 ==>  0
+info: Block# = 297 ==> c0
+info: Block# = 298 ==> 40
+info: Block# = 299 ==> 40
+info: Block# = 300 ==>  0
+info: Block# = 301 ==>  0
+info: Block# = 302 ==> c0
+info: Block# = 303 ==>  0
+info: Block# = 304 ==>  0
+info: Block# = 305 ==> 40
+info: Block# = 306 ==>  0
+info: Block# = 307 ==> 40
+info: Block# = 308 ==>  0
+info: Block# = 309 ==> 40
+info: Block# = 310 ==> 40
+info: Block# = 311 ==>  0
+info: Block# = 312 ==>  0
+info: Block# = 313 ==>  0
+info: Block# = 314 ==> 40
+info: Block# = 315 ==> 40
+info: Block# = 316 ==>  0
+info: Block# = 317 ==> 40
+info: Block# = 318 ==> 40
+info: Block# = 319 ==> 40
+info: Block# = 320 ==>  0
+info: Block# = 321 ==> 40
+info: Block# = 322 ==> c0
+info: Block# = 323 ==>  0
+info: Block# = 324 ==>  0
+info: Block# = 325 ==> 40
+info: Block# = 326 ==> c0
+info: Block# = 327 ==> 40
+info: Block# = 328 ==>  0
+info: Block# = 329 ==> c0
+info: Block# = 330 ==> 40
+info: Block# = 331 ==> 40
+info: Block# = 332 ==>  0
+info: Block# = 333 ==> 40
+info: Block# = 334 ==> 40
+info: Block# = 335 ==> 40
+info: Block# = 336 ==>  0
+info: Block# = 337 ==> c0
+info: Block# = 338 ==> 40
+info: Block# = 339 ==> 40
+info: Block# = 340 ==>  0
+info: Block# = 341 ==> c0
+info: Block# = 342 ==> c0
+info: Block# = 343 ==> 40
+info: Block# = 344 ==>  0
+info: Block# = 345 ==> 40
+info: Block# = 346 ==> 40
+info: Block# = 347 ==> 40
+info: Block# = 348 ==>  0
+info: Block# = 349 ==> 40
+info: Block# = 350 ==> 40
+info: Block# = 351 ==> c0
+info: Block# = 352 ==>  0
+info: Block# = 353 ==> 40
+info: Block# = 354 ==> c0
+info: Block# = 355 ==> 40
+info: Block# = 356 ==>  0
+info: Block# = 357 ==> 40
+info: Block# = 358 ==> 40
+info: Block# = 359 ==> c0
+info: Block# = 360 ==>  0
+info: Block# = 361 ==> 40
+info: Block# = 362 ==> 40
+info: Block# = 363 ==> c0
+info: Block# = 364 ==>  0
+info: Block# = 365 ==> c0
+info: Block# = 366 ==>  0
+info: Block# = 367 ==> 40
+info: Block# = 368 ==>  0
+info: Block# = 369 ==> 40
+info: Block# = 370 ==>  0
+info: Block# = 371 ==> 40
+info: Block# = 372 ==>  0
+info: Block# = 373 ==> 40
+info: Block# = 374 ==> 40
+info: Block# = 375 ==> 40
+info: Block# = 376 ==>  0
+info: Block# = 377 ==>  0
+info: Block# = 378 ==>  0
+info: Block# = 379 ==>  0
+info: Block# = 380 ==>  0
+info: Block# = 381 ==> 40
+info: Block# = 382 ==> 40
+info: Block# = 383 ==> c0
+info: Block# = 384 ==>  0
+info: Block# = 385 ==> 40
+info: Block# = 386 ==> 40
+info: Block# = 387 ==> c0
+info: Block# = 388 ==>  0
+info: Block# = 389 ==> 40
+info: Block# = 390 ==> 40
+info: Block# = 391 ==> 40
+info: Block# = 392 ==>  0
+info: Block# = 393 ==> 40
+info: Block# = 394 ==> 40
+info: Block# = 395 ==> 40
+info: Block# = 396 ==>  0
+info: Block# = 397 ==> 40
+info: Block# = 398 ==> 40
+info: Block# = 399 ==>  0
+info: Block# = 400 ==>  0
+info: Block# = 401 ==>  0
+info: Block# = 402 ==> 40
+info: Block# = 403 ==> c0
+info: Block# = 404 ==>  0
+info: Block# = 405 ==> 40
+info: Block# = 406 ==> c0
+info: Block# = 407 ==> c0
+info: Block# = 408 ==>  0
+info: Block# = 409 ==> 40
+info: Block# = 410 ==>  0
+info: Block# = 411 ==> 40
+info: Block# = 412 ==>  0
+info: Block# = 413 ==>  0
+info: Block# = 414 ==> 40
+info: Block# = 415 ==> 40
+info: Block# = 416 ==>  0
+info: Block# = 417 ==> 40
+info: Block# = 418 ==> 40
+info: Block# = 419 ==> 40
+info: Block# = 420 ==>  0
+info: Block# = 421 ==> c0
+info: Block# = 422 ==> c0
+info: Block# = 423 ==> 40
+info: Block# = 424 ==>  0
+info: Block# = 425 ==> 40
+info: Block# = 426 ==> 40
+info: Block# = 427 ==> 40
+info: Block# = 428 ==>  0
+info: Block# = 429 ==> c0
+info: Block# = 430 ==> 40
+info: Block# = 431 ==> 40
+info: Block# = 432 ==>  0
+info: Block# = 433 ==> c0
+info: Block# = 434 ==> 40
+info: Block# = 435 ==> 40
+info: Block# = 436 ==>  0
+info: Block# = 437 ==> 40
+info: Block# = 438 ==>  0
+info: Block# = 439 ==> 40
+info: Block# = 440 ==>  0
+info: Block# = 441 ==>  0
+info: Block# = 442 ==> c0
+info: Block# = 443 ==> 40
+info: Block# = 444 ==>  0
+info: Block# = 445 ==> 40
+info: Block# = 446 ==> c0
+info: Block# = 447 ==> 40
+info: Block# = 448 ==>  0
+info: Block# = 449 ==>  0
+info: Block# = 450 ==>  0
+info: Block# = 451 ==> 40
+info: Block# = 452 ==>  0
+info: Block# = 453 ==>  0
+info: Block# = 454 ==> c0
+info: Block# = 455 ==> 40
+info: Block# = 456 ==>  0
+info: Block# = 457 ==> 40
+info: Block# = 458 ==>  0
+info: Block# = 459 ==>  0
+info: Block# = 460 ==>  0
+info: Block# = 461 ==> 40
+info: Block# = 462 ==> c0
+info: Block# = 463 ==>  0
+info: Block# = 464 ==>  0
+info: Block# = 465 ==> c0
+info: Block# = 466 ==> c0
+info: Block# = 467 ==> 40
+info: Block# = 468 ==>  0
+info: Block# = 469 ==> 40
+info: Block# = 470 ==> 40
+info: Block# = 471 ==>  0
+info: Block# = 472 ==>  0
+info: Block# = 473 ==> 40
+info: Block# = 474 ==> 40
+info: Block# = 475 ==>  0
+info: Block# = 476 ==>  0
+info: Block# = 477 ==> c0
+info: Block# = 478 ==> c0
+info: Block# = 479 ==> 40
+info: Block# = 480 ==>  0
+info: Block# = 481 ==> 40
+info: Block# = 482 ==> c0
+info: Block# = 483 ==> c0
+info: Block# = 484 ==>  0
+info: Block# = 485 ==>  0
+info: Block# = 486 ==> 40
+info: Block# = 487 ==> 40
+info: Block# = 488 ==>  0
+info: Block# = 489 ==> c0
+info: Block# = 490 ==> 40
+info: Block# = 491 ==> 40
+info: Block# = 492 ==>  0
+info: Block# = 493 ==> 40
+info: Block# = 494 ==> 40
+info: Block# = 495 ==> 40
+info: Block# = 496 ==>  0
+info: Block# = 497 ==> 40
+info: Block# = 498 ==> 40
+info: Block# = 499 ==> 40
+info: Block# = 500 ==>  0
+info: Block# = 501 ==> c0
+info: Block# = 502 ==>  0
+info: Block# = 503 ==> 40
+info: Block# = 504 ==>  0
+info: Block# = 505 ==> 40
+info: Block# = 506 ==> 40
+info: Block# = 507 ==> 40
+info: Block# = 508 ==>  0
+info: Block# = 509 ==> c0
+info: Block# = 510 ==> 40
+info: Block# = 511 ==> 40
+Switch at instruction count:3390
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+Switched CPUS @ tick 1711000
+switching cpus
+**** REAL SIMULATION ****
+info: Entering event queue @ 1711000.  Starting simulation...
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+16185500: global: Approximate Region Added: begin=0x12010, end=0x52010, Table Size=1
+31617000: global: Approximate Region Added: begin=0x54010, end=0x15401c, Table Size=2
+31823000: global: Approximate Region Added: begin=0x1200cf470, end=0x1200cf674, Table Size=3
+423588500: global: Approximate Region Added: begin=0x156010, end=0x25601c, Table Size=4
+423799000: global: Approximate Region Added: begin=0x258010, end=0x35801c, Table Size=5
+44651521500: global: Approximate Region Removed: begin=0x156010, end=0x25601c, Table Size=4
+44651525500: global: Approximate Region Removed: begin=0x258010, end=0x35801c, Table Size=3
+Exiting @ tick 44929247000 because target called exit()
