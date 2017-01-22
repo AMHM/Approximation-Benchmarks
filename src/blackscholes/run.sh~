@@ -1,1 +1,0 @@
-./../../bin/x86/blackscholes 1 ../../inputs/blackscholes/in_16.txt ../../bin/x86/blackscholes_output.txt #test

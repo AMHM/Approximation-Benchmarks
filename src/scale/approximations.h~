@@ -1,5 +1,0 @@
-//Approximation Options
-#include "../../shared_lib/m5op.h"
-
-#define approximation  // AMHM: Enabling approximation
-extern int reliability_level;
