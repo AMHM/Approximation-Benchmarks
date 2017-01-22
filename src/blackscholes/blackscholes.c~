@@ -45,7 +45,11 @@ MAIN_ENV
 //Precision to use for calculations
 #define fptype float
 
-#include "approximations.h"
+#ifdef AMHM_APPROXIMATION
+#include "../../shared_lib/approximations.h"
+int reliability_level = 0;
+#endif
+
 #include <math.h>
 
 int NUM_RUNS = 10;
@@ -277,16 +281,31 @@ int main (int argc, char **argv)
 #ifdef ENABLE_PARSEC_HOOKS
    __parsec_bench_begin(__parsec_blackscholes);
 #endif
-   printf("Man Injam\n");
+   
+#ifdef AMHM_APPROXIMATION
    if (argc != 5)
         {
                 printf("Usage:\n\t%s <nthreads> <inputFile> <outputFile> <reliability_level>\n", argv[0]);
                 exit(1);
         }
+#endif
+
+#ifdef AMHM_APPROXIMATION
+   if (argc != 4)
+        {
+                printf("Usage:\n\t%s <nthreads> <inputFile> <outputFile>\n", argv[0]);
+                exit(1);
+        }
+#endif
+
     nThreads = atoi(argv[1]);
     char *inputFile = argv[2];
     char *outputFile = argv[3];
+
+#ifdef AMHM_APPROXIMATION
     reliability_level = atoi(argv[4]);
+#endif
+    
     //Read input data from file
     file = fopen(inputFile, "r");
     if(file == NULL) {
@@ -315,8 +334,10 @@ int main (int argc, char **argv)
     data = (OptionData*)malloc(numOptions*sizeof(OptionData));
     prices = (fptype*)malloc(numOptions*sizeof(fptype));
 
+#ifdef AMHM_APPROXIMATION
     m5_add_approx(  (uint32_t)&data, (uint32_t)(&data + (numOptions*sizeof(OptionData)) - 1), reliability_level);
     m5_add_approx(  (uint32_t)&prices, (uint32_t)(&prices + (numOptions*sizeof(fptype)) - 1), reliability_level);
+#endif
 
     for ( loopnum = 0; loopnum < numOptions; ++ loopnum )
     {
@@ -344,7 +365,9 @@ int main (int argc, char **argv)
 
     buffer = (fptype *) malloc(5 * numOptions * sizeof(fptype) + PAD);
 
+#ifdef AMHM_APPROXIMATION
     m5_add_approx(  (uint32_t)&buffer, (uint32_t)(&buffer + (5 * numOptions * sizeof(fptype)) - 1), reliability_level);
+#endif
 
     sptprice = (fptype *) (((unsigned long long)buffer + PAD) & ~(LINESIZE - 1));
     strike = sptprice + numOptions;

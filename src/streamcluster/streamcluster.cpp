@@ -23,6 +23,7 @@
 
 #ifdef AMHM_APPROXIMATION
 #include "../../shared_lib/approximations.h"
+  int reliability_level = 0;
 #endif
 
 
@@ -460,7 +461,7 @@ double pgain(long x, Points *points, double z, long int *numcenters, int pid, pt
   if (gl_cost_of_opening_x < 0) {
     //  we'd save money by opening x; we'll do it
     for ( int i = k1; i < k2; i++ ) {
-      bool close_center = gl_lower[center_table[points->p[i].assign]];
+      bool close_center = gl_lower[center_table[points->p[i].assign]] > 0;
       if ( switch_membership[i] || close_center ) {
 	// Either i's median (which may be i itself) is closing,
 	// or i is closer to x than to its current median
@@ -470,7 +471,7 @@ double pgain(long x, Points *points, double z, long int *numcenters, int pid, pt
       }
     }
     for( int i = k1; i < k2; i++ ) {
-      if( is_center[i] && gl_lower[center_table[i]]) {
+      if( is_center[i] && gl_lower[center_table[i]] > 0) {
 	is_center[i] = false;
       }
     }
@@ -1212,14 +1213,12 @@ int main(int argc, char **argv)
 #ifdef ENABLE_PARSEC_HOOKS
   __parsec_roi_begin();
 #endif
-  //accept_roi_begin();
 
   streamCluster(stream, kmin, kmax, dim, chunksize, clustersize, outfilename );
 
 #ifdef ENABLE_PARSEC_HOOKS
   __parsec_roi_end();
 #endif
-  //accept_roi_end();
 
   delete stream;
 

@@ -1,13 +1,13 @@
-FILE = blackscholes.c
+FILE = susan.c
 
 CC_ARM = arm-linux-gnueabi-gcc
-CC_FLAGS_ARM = -static -DAMHM_APPROXIMATION -O0 -pthread
+CC_FLAGS_ARM = -static -DAMHM_APPROXIMATION -O0
 ISA_FILE_ARM = ../../shared_lib/m5op_arm.S
-LDFLAGS_ARM = -lm -pthread
+LDFLAGS_ARM = -lm
 
 CC = gcc
 CC_FLAGS = -static
-LDFLAGS = -lm -pthread
+LDFLAGS = -lm
 
 BINDIR = ../../bin
 

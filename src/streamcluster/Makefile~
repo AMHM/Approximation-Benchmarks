@@ -1,7 +1,7 @@
 FILE = streamcluster.cpp parsec_barrier.cpp
 
 CC_ARM = arm-linux-gnueabi-g++
-CC_FLAGS_ARM = -static -DAMHM_APPROXIMATION
+CC_FLAGS_ARM = -static -DAMHM_APPROXIMATION -O0
 ISA_FILE_ARM = ../../shared_lib/m5op_arm.S
 LDFLAGS_ARM = -lpthread
 
@@ -16,7 +16,7 @@ all: arm x86
 arm:
 	$(CC_ARM)  $(CC_FLAGS_ARM) $(FILE) -o $(BINDIR)/arm/streamcluster $(ISA_FILE_ARM) $(LDFLAGS_ARM)
 	
-x86_64:
+x86:
 	$(CC)  $(CC_FLAGS) $(FILE) -o $(BINDIR)/x86/streamcluster $(LDFLAGS)
 
 clean:

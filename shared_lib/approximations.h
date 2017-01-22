@@ -2,4 +2,4 @@
 #include "m5op.h"
 
 #define approximation  // AMHM: Enabling approximation
-int reliability_level = 0;
+extern int reliability_level;

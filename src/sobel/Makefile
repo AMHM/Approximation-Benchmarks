@@ -1,13 +1,24 @@
-FILE1 = sobel.c
+FILE = sobel.c
 
-CC = arm-linux-gnueabi-gcc
+CC_ARM = arm-linux-gnueabi-gcc
+CC_FLAGS_ARM = -static -DAMHM_APPROXIMATION -O0
+ISA_FILE_ARM = ../../shared_lib/m5op_arm.S
+LDFLAGS_ARM =
+
+CC = gcc
 CC_FLAGS = -static
-ISA_FILE = /home/amir/AMHM_Approximation_Benchmarks/sobel/m5op_arm.S
+LDFLAGS =
 
-all: sobel
+BINDIR = ../../bin
 
-sobel: ${FILE1} Makefile
-	$(CC)  $(CC_FLAGS) ${FILE1} -o sobel $(ISA_FILE)
+all: arm x86
+
+arm:
+	$(CC_ARM)  $(CC_FLAGS_ARM) $(FILE) -o $(BINDIR)/arm/sobel $(ISA_FILE_ARM) $(LDFLAGS_ARM)
+	
+x86:
+	$(CC)  $(CC_FLAGS) $(FILE) -o $(BINDIR)/x86/sobel $(LDFLAGS)
 
 clean:
-	rm -rf sobel output*
+	rm -rf $(BINDIR)/arm/sobel output*
+	rm -rf $(BINDIR)/x86/sobel output*

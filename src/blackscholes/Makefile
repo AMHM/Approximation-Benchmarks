@@ -1,14 +1,24 @@
-FILE1 = blackscholes.c
+FILE = blackscholes.c
 
-CC = arm-linux-gnueabi-gcc
-CC_FLAGS = -static -pthread
-ISA_FILE = /home/amir/AMHM_Approximation_Benchmarks/blackscholes/m5op_arm.S
-LDFLAGS := -lm -pthread
+CC_ARM = arm-linux-gnueabi-gcc
+CC_FLAGS_ARM = -static -DAMHM_APPROXIMATION -O0 -pthread
+ISA_FILE_ARM = ../../shared_lib/m5op_arm.S
+LDFLAGS_ARM = -lm -pthread
 
-all: blackscholes
+CC = gcc
+CC_FLAGS = -static
+LDFLAGS = -lm -pthread
 
-blackscholes: ${FILE1} Makefile
-	      $(CC)  $(CC_FLAGS) ${FILE1} -o blackscholes $(ISA_FILE) $(LDFLAGS) 
+BINDIR = ../../bin
+
+all: arm x86
+
+arm:
+	$(CC_ARM)  $(CC_FLAGS_ARM) $(FILE) -o $(BINDIR)/arm/blackscholes $(ISA_FILE_ARM) $(LDFLAGS_ARM)
+	
+x86:
+	$(CC)  $(CC_FLAGS) $(FILE) -o $(BINDIR)/x86/blackscholes $(LDFLAGS)
 
 clean:
-	rm -rf blackscholes output*
+	rm -rf $(BINDIR)/arm/blackscholes output*
+	rm -rf $(BINDIR)/x86/blackscholes output*

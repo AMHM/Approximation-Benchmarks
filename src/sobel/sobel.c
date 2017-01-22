@@ -3,7 +3,11 @@
 #include <stdlib.h>
 #include <float.h>
 #include "mypgm.h"
-#include "approximations.h"
+
+#ifdef AMHM_APPROXIMATION
+#include "../../shared_lib/approximations.h"
+int reliability_level = 0;
+#endif
 
 void sobel_filtering( )
      /* Spatial filtering of image data */
@@ -63,22 +67,22 @@ void sobel_filtering( )
 
 int main(int argc, const char** argv)
 {
-  //AMHM Starts
-  #ifdef approximation
+  
+  #ifdef AMHM_APPROXIMATION
   reliability_level = atoi(argv[3]);
   m5_add_approx(  (uint32_t)&image1[0][0], (uint32_t)(&image1[MAX_IMAGESIZE-1][MAX_IMAGESIZE-1]), reliability_level);
   m5_add_approx(  (uint32_t)&image2[0][0], (uint32_t)(&image2[MAX_IMAGESIZE-1][MAX_IMAGESIZE-1]), reliability_level);
   #endif
-  //AMHM Ends 
+
   load_image_data(argv[1]);   /* Input of image1 */ 
   sobel_filtering( );   /* Sobel filter is applied to image1 */
   save_image_data(argv[2]);   /* Output of image2 */
-  //AMHM Starts
-  #ifdef approximation
+  
+  #ifdef AMHM_APPROXIMATION
   m5_remove_approx(  (uint32_t)&image1[0][0], (uint32_t)(&image1[MAX_IMAGESIZE-1][MAX_IMAGESIZE-1]), reliability_level);
   m5_remove_approx(  (uint32_t)&image2[0][0], (uint32_t)(&image2[MAX_IMAGESIZE-1][MAX_IMAGESIZE-1]), reliability_level);
   #endif
-  //AMHM Ends 
+  
   return 0;
 }
 
