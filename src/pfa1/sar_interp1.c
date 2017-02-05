@@ -69,9 +69,12 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
-#include <enerc.h>
 
-#include "sar_interp1.h"
+#include "inc/sar_interp1.h"
+#include "inc/sar_params.h"
+#include "inc/sar_utils.h"
+
+#include "inc/timer.h"
 
 static int find_nearest_range_coord(
     double target_coord,

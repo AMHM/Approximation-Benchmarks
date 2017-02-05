@@ -78,8 +78,11 @@
 #include "inc/sar_interp1.h"
 
 #include "inc/timer.h"
-#include "approximations.h"
-//AMHM Ends
+
+#ifdef AMHM_APPROXIMATION
+#include "../../shared_lib/approximations.h"
+int reliability_level = 0;
+#endif
 
 #define ENABLE_CORRECTNESS_CHECKING
 
@@ -137,9 +140,9 @@ int main(int argc, char **argv)
 
     input_directory = argv[1];
 
-    //AMHM Starts
+    #ifdef AMHM_APPROXIMATION
     reliability_level = atoi(argv[2]);
-    //AMHM Ends
+    #endif
 
     data = XMALLOC(sizeof(complex) * num_data_elements);
     resampled = XMALLOC(sizeof(complex) * num_resampled_elements);

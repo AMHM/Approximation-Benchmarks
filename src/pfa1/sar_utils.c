@@ -66,7 +66,7 @@
  *
  **EndCopyright*************************************************************/
 
-#include "sar_utils.h"
+#include "inc/sar_utils.h"
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
@@ -97,12 +97,12 @@ double calculate_snr(
 
     for (i = 0; i < num_elements; ++i)
     {
-        den += (ENDORSE(reference[i].re) - ENDORSE(test[i].re)) *
-               (ENDORSE(reference[i].re) - ENDORSE(test[i].re));
-        den += (ENDORSE(reference[i].im) - ENDORSE(test[i].im)) *
-               (ENDORSE(reference[i].im) - ENDORSE(test[i].im));
-        num += ENDORSE(reference[i].re) * ENDORSE(reference[i].re) +
-               ENDORSE(reference[i].im) * ENDORSE(reference[i].im);
+        den += (reference[i].re - test[i].re) *
+               (reference[i].re - test[i].re);
+        den += (reference[i].im - test[i].im) *
+               (reference[i].im - test[i].im);
+        num += reference[i].re * reference[i].re +
+               reference[i].im * reference[i].im;
     }
 
     if (den == 0)

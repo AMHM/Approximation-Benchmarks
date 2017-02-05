@@ -72,29 +72,31 @@
 #include <math.h>
 #include <assert.h>
 
-//AMHM Starts
 #include "inc/sar_params.h"
 #include "inc/sar_utils.h"
 #include "inc/sar_interp1.h"
 
 #include "inc/timer.h"
-#include "approximations.h"
-//AMHM Ends
+
+#ifdef AMHM_APPROXIMATION
+#include "../../shared_lib/approximations.h"
+int reliability_level = 0;
+#endif
 
 #define ENABLE_CORRECTNESS_CHECKING
 
 #if INPUT_SIZE == INPUT_SIZE_SMALL
-    static const char *output_filename = "input_app_small_output.bin";
-    static const char *golden_output_filename = "input_app_small_output.bin";
-    static const char *input_filename = "input_app_small.bin";
+    static const char *output_filename = "small_kernel1_output.bin";
+    static const char *golden_output_filename = "small_golden_kernel1_output.bin";
+    static const char *input_filename = "small_kernel1_input.bin";
 #elif INPUT_SIZE == INPUT_SIZE_MEDIUM
-    static const char *output_filename = "input_app_medium_output.bin";
-    static const char *golden_output_filename = "input_app_medium_output.bin";
-    static const char *input_filename = "input_app_medium.bin";
+    static const char *output_filename = "medium_kernel1_output.bin";
+    static const char *golden_output_filename = "medium_golden_kernel1_output.bin";
+    static const char *input_filename = "medium_kernel1_input.bin";
 #elif INPUT_SIZE == INPUT_SIZE_LARGE
-    static const char *output_filename = "input_app_large_output.bin";
-    static const char *golden_output_filename = "input_app_large_output.bin";
-    static const char *input_filename = "input_app_large.bin";
+    static const char *output_filename = "large_kernel1_output.bin";
+    static const char *golden_output_filename = "large_golden_kernel1_output.bin";
+    static const char *input_filename = "large_kernel1_input.bin";
 #else
     #error "Unhandled value for INPUT_SIZE"
 #endif
@@ -127,19 +129,27 @@ int main(int argc, char **argv)
     const size_t num_resampled_elements = N_PULSES * PFA_NOUT_RANGE;
     const size_t num_window_elements = T_PFA;
 
-    //AMHM Starts
+#ifdef AMHM_APPROXIMATION
     if (argc != 3)
     {
         fprintf(stderr, "%s <directory-containing-input-files> <reliability-level>\n", argv[0]);
         exit(EXIT_FAILURE);
     }
-    //AMHM Ends
+#endif
+
+#ifndef AMHM_APPROXIMATION
+    if (argc != 2)
+    {
+        fprintf(stderr, "%s <directory-containing-input-files>\n", argv[0]);
+        exit(EXIT_FAILURE);
+    }
+#endif
 
     input_directory = argv[1];
 
-    //AMHM Starts
+#ifdef AMHM_APPROXIMATION
     reliability_level = atoi(argv[2]);
-    //AMHM Ends
+#endif
 
     data = XMALLOC(sizeof(complex) * num_data_elements);
     resampled = XMALLOC(sizeof(complex) * num_resampled_elements);
@@ -151,9 +161,9 @@ int main(int argc, char **argv)
     gold_resampled = XMALLOC(sizeof(complex) * num_resampled_elements);
 #endif
 
-    //AMHM Starts
+#ifdef AMHM_APPROXIMATION
     m5_add_approx((uint32_t)&data, (uint32_t)(&data + (sizeof(complex) * (num_data_elements - 1))), reliability_level);
-    //AMHM Ends
+#endif
 
     read_kern1_data_file(
         input_filename,
@@ -231,9 +241,9 @@ int main(int argc, char **argv)
     FREE_AND_NULL(gold_resampled);
 #endif
 
-    //AMHM Starts
+#ifdef AMHM_APPROXIMATION
     m5_remove_approx((uint32_t)&data, (uint32_t)(&data + (sizeof(complex) * (num_data_elements - 1))), reliability_level);
-    //AMHM Ends
+#endif
 
     return 0;
 }
@@ -266,6 +276,7 @@ void read_kern1_data_file(
         dir_and_filename,
         directory,
         input_filename);
+
     fp = fopen(dir_and_filename, "rb");
     if (fp == NULL)
     {
