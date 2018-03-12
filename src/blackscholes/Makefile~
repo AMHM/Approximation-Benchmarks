@@ -1,7 +1,7 @@
 FILE = blackscholes.cc
 
-CC_ARM = arm-linux-gnueabi-gcc
-CC_FLAGS_ARM = -lstdc++ -static -DAMHM_APPROXIMATION -O0 -pthread
+CC_ARM = arm-linux-gnueabi-g++
+CC_FLAGS_ARM = -static -DAMHM_APPROXIMATION -O0 -pthread
 ISA_FILE_ARM = ../../shared_lib/m5op_arm.S
 LDFLAGS_ARM = -lm -pthread
 

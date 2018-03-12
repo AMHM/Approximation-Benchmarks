@@ -11,10 +11,14 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
-#include <fstream.h>
-#include <iostream>
 #include <vector>
 #include <iomanip>
+
+
+#ifdef AMHM_APPROXIMATION
+#include "../../shared_lib/approximations.h"
+int reliability_level = 0;
+#endif
 
 
 //double max_otype, min_otype ;
@@ -197,12 +201,12 @@ fptype BlkSchlsEqEuroNoDiv( fptype sptprice,
     NofXd1 = CNDF( d1 );
 
     if(NofXd1 > 1.0)
-        std::cerr << "Greater than one!" << std::endl ;
+        printf("Greater than one!\n");
     //printf("# d1: %10.10f\n", NofXd1);
 
     NofXd2 = CNDF( d2 );
     if(NofXd2 > 1.0)
-         std::cerr << "Greater than one!" << std::endl ;
+	printf("Greater than one!\n");
     //printf("# d2: %10.10f\n", NofXd2);
 
     *N1 = NofXd1 ;
@@ -280,10 +284,31 @@ int main (int argc, char **argv)
 
 
 	fflush(NULL);
+    
+#ifdef AMHM_APPROXIMATION
+if (argc != 5)
+        {
+                printf("Usage:\n\t%s <nthreads> <inputFile> <outputFile> <reliability_level>\n", argv[0]);
+                exit(1);
+        }
+#endif
 
+#ifndef AMHM_APPROXIMATION
+   if (argc != 4)
+        {
+                printf("Usage:\n\t%s <nthreads> <inputFile> <outputFile>\n", argv[0]);
+                exit(1);
+        }
+#endif
 
-    char *inputFile = argv[1];
-    char *outputFile = argv[2];
+    nThreads = atoi(argv[1]);
+    char *inputFile = argv[2];
+    char *outputFile = argv[3];
+
+#ifdef AMHM_APPROXIMATION
+    reliability_level = atoi(argv[4]);
+#endif
+
 
     //Read input data from file
     file = fopen(inputFile, "r");
@@ -329,6 +354,16 @@ int main (int argc, char **argv)
 
     buffer2 = (int *) malloc(numOptions * sizeof(fptype) + PAD);
     otype = (int *) (((unsigned long long)buffer2 + PAD) & ~(LINESIZE - 1));
+ 
+#ifdef AMHM_APPROXIMATION
+    m5_add_approx(  (uint32_t)&buffer[0], (uint32_t)(&buffer[5 * numOptions] + PAD + sizeof(fptype) - 1), reliability_level);
+    m5_add_approx(  (uint32_t)&sptprice[0], (uint32_t)(&sptprice[numOptions] - 1), reliability_level);
+    m5_add_approx(  (uint32_t)&strike[0], (uint32_t)(&strike[numOptions] - 1), reliability_level);
+    m5_add_approx(  (uint32_t)&rate[0], (uint32_t)(&rate[numOptions] - 1), reliability_level);
+    m5_add_approx(  (uint32_t)&volatility[0], (uint32_t)(&volatility[numOptions] - 1), reliability_level);
+    m5_add_approx(  (uint32_t)&otime[0], (uint32_t)(&otime[numOptions] - 1), reliability_level);
+#endif
+    
 
     for (i=0; i<numOptions; i++) {
         otype[i]      = (data[i].OptionType == 'P') ? 1 : 0;
