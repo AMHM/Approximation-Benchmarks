@@ -1,4 +1,4 @@
-all: make_directories blackscholes scale sobel streamcluster susan  
+all: make_directories blackscholes scale sobel susan  
 
 make_directories:
 	mkdir -p "bin/arm"

@@ -864,7 +864,6 @@ uchar *inp, *midp;
       *(in + (midp - mid)) = 0;
     midp++;
   }
-  printf("Man Injam: Edge: 2\n");
 }
 
 /* }}} */
